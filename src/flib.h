@@ -16,6 +16,15 @@ public:
             return d;
         }
     }
+    bool set(double numerator = 0, double denominator = 1) {
+        if (denominator != 0) {
+            n = numerator;
+            d = denominator;
+            return true;
+        } else {
+            return false;
+        }
+    }
 private:
     double n, d;
 };
