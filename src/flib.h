@@ -45,6 +45,12 @@ public:
 	bool lessThan(Fraction f) {
 		return !greaterThan(f);
 	}
+	Fraction multiplyBy(Fraction f) {
+		return Fraction(n * f.get(F_NUMERATOR), d * f.get(F_DENOMINATOR));
+	}
+	Fraction divideBy(Fraction f) {
+		return multiplyBy(Fraction(f.get(F_DENOMINATOR), f.get(F_NUMERATOR)));
+	}
 	bool equalTo(Fraction f) {
 		if (f.get(F_DECIMAL) == get(F_DECIMAL)) {
 			return true;

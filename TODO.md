@@ -2,6 +2,4 @@
 
 * Fraction math
     * Addition
-    * Subtration
-    * Multiplication
-    * Division
+    * Subtraction
