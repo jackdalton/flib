@@ -16,6 +16,7 @@ int main() {
     Fraction f2 = f1.reduce();
     if (f2.get(F_NUMERATOR) != 1) passed = false;
     if (f2.get(F_DENOMINATOR) != 2) passed = false;
+    if (!f2.equalTo(f1)) passed = false;
     if (passed) {
         std::cout << "Test passed." << std::endl;
     } else {

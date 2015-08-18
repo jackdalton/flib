@@ -32,6 +32,12 @@ public:
         }
         return Fraction(ln, ld);
     }
+    bool equalTo(Fraction f) {
+        if (f.get(F_DECIMAL) == get(F_DECIMAL)) {
+            return true;
+        }
+        return false;
+    }
     std::string toString() {
         std::stringstream st;
         st << n << "/" << d;
