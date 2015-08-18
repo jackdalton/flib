@@ -17,6 +17,10 @@ int main() {
     if (f2.get(F_NUMERATOR) != 1) passed = false;
     if (f2.get(F_DENOMINATOR) != 2) passed = false;
     if (!f2.equalTo(f1)) passed = false;
+    if (f2.greaterThan(f1)) passed = false;
+    f2.set(2, 3);
+    if (!f2.greaterThan(f1)) passed = false;
+    if (!f1.lessThan(f2)) passed = false;
     if (passed) {
         std::cout << "Test passed." << std::endl;
     } else {

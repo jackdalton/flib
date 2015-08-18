@@ -32,6 +32,15 @@ public:
         }
         return Fraction(ln, ld);
     }
+    bool greaterThan(Fraction f) {
+        if (get(F_DECIMAL) > f.get(F_DECIMAL)) {
+            return true;
+        }
+        return false;
+    }
+    bool lessThan(Fraction f) {
+        return !greaterThan(f);
+    }
     bool equalTo(Fraction f) {
         if (f.get(F_DECIMAL) == get(F_DECIMAL)) {
             return true;
