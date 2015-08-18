@@ -21,6 +21,17 @@ public:
             return n / d;
         }
     }
+    Fraction reduce() {
+        double ld = d;
+        double ln = n;
+        for (int i = d * n; i > 1; i--) {
+            if ((fmod(d, i) == 0) && (fmod(n, i) == 0)) {
+                ln /= i;
+                ld /= i;
+            }
+        }
+        return Fraction(ln, ld);
+    }
     std::string toString() {
         std::stringstream st;
         st << n << "/" << d;
