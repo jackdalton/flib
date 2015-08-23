@@ -27,6 +27,8 @@ int main() {
 	f2.set(2, 3);
 	f3 = f3.divideBy(f2);
 	if (!f3.equalTo(Fraction(9, 8))) passed = false;
+	Fraction f4(1, 2);
+	if (!f4.toPercent() == 50) passed = false;
 	if (passed) {
 		std::cout << "Test passed." << std::endl;
 	}

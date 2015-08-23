@@ -42,6 +42,9 @@ public:
 		}
 		return false;
 	}
+	double toPercent() {
+		return (n / d) * 100;
+	}
 	bool lessThan(Fraction f) {
 		return !greaterThan(f);
 	}
