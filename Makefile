@@ -1,2 +1,2 @@
 all:
-	gcc src/main.cpp
+	g++ src/main.cpp
