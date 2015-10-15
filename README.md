@@ -1,4 +1,4 @@
-# flib
+# Flib [![Build Status](https://travis-ci.org/jackdalton/flib.svg)](https://travis-ci.org/jackdalton/flib)
 A C++ fraction library.
 
 ### Testing
