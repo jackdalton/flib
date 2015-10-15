@@ -7,6 +7,7 @@
 int F_NUMERATOR = 0;
 int F_DENOMINATOR = 1;
 int F_DECIMAL = 2;
+int F_PERCENT = 3;
 
 class Fraction {
 public:
@@ -23,6 +24,9 @@ public:
 		}
 		else if (target == 2) {
 			return n / d;
+		}
+		else if (target == 3) {
+		    return (n / d) * 100;
 		}
 	}
 	Fraction reduce() {
@@ -43,7 +47,7 @@ public:
 		return false;
 	}
 	double toPercent() {
-		return (n / d) * 100;
+		return get(F_PERCENT);
 	}
 	bool lessThan(Fraction f) {
 		return !greaterThan(f);
